@@ -1,8 +1,8 @@
 # jsonapi-response-builder
 Response builder for NodeJS based on http://jsonapi.org/ recommendations
 
-The projet propose an implementation of the JSON API recommendation.
-As the recommendation is a current work-in-progress, this plugin will probably change in order to respect the new specifications.
+The projet proposes an implementation of the JSON API recommendation.
+As the recommendation is an on-going project, this plugin will probably change in order to respect the new specifications.
 
 ## Installation
 
@@ -10,7 +10,7 @@ In order to install that module, open a terminal, go to your npm project and run
 
     npm install jsonapi-response-builder --save
 
-You can also run that command with the -g option to save it globally
+You can also run that command with the -g option to save it globally and re-use it later.
 
 ## Contributing
 
