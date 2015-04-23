@@ -1,0 +1,24 @@
+{
+  "name": "jsonapi-response-builder",
+  "version": "0.0.0",
+  "description": "Response builder for NodeJS based on http://jsonapi.org/ recommendations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AlwinCorp/jsonapi-response-builder.git"
+  },
+  "keywords": [
+    "JSONApi",
+    "Response",
+    "Builder"
+  ],
+  "author": "Adrien (Alwin)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlwinCorp/jsonapi-response-builder/issues"
+  },
+  "homepage": "https://github.com/AlwinCorp/jsonapi-response-builder"
+}
