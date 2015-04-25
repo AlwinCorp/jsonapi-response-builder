@@ -66,4 +66,16 @@ MetaResponse.prototype.getResponse = function() {
     return this.response;
 }
 
+MetaResponse.prototype.addError = function(error) {
+    if(!this.getResponse().hasOwnProperty('errors')) {
+        this.getResponse()['errors'] = [];
+    }
+
+    if(typeof error.getResponse === "function") {
+        this.getResponse().errors.push(error.getResponse());
+    } else {
+        this.getResponse().errors.push(error);
+    }
+}
+
 module.exports = MetaResponse;
