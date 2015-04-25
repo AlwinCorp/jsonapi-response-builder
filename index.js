@@ -1,5 +1,7 @@
 var MetaReponse = require('./MetaResponse');
 var MetaData    = require('./MetaData');
+var MetaError   = require('./MetaError');
 
-module.exports.response = MetaReponse;
-module.exports.data     = MetaData;
+module.exports.Response = MetaReponse;
+module.exports.Data     = MetaData;
+module.exports.Error    = MetaReponse;
