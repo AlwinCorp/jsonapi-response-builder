@@ -22,10 +22,10 @@ MetaData.prototype.setType = function(type) {
 /**
  * Get type document
  * 
- * @return {String} Return the document type if it exists
+ * @return {mixed} Return the document type if it exists
  */
 MetaData.prototype.getType = function() {
-    return (this.data.hasOwnProperty("type")) ? this.data["type"] : "";
+    return (this.data.hasOwnProperty("type")) ? this.data["type"] : undefined;
 }
 
 /**
@@ -58,8 +58,12 @@ MetaData.prototype.setId = function(id) {
     this.data["id"] = id;
 }
 
+/**
+ * Get the object ID
+ * @return {mixed}  
+ */
 MetaData.prototype.getId = function() {
-    return (this.data.hasOwnProperty("id")) ? this.data["id"] : "";
+    return (this.data.hasOwnProperty("id")) ? this.data["id"] : undefined;
 }
 
 MetaData.prototype.addAttribute = function(name, value) {

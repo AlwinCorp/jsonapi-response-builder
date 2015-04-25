@@ -4,6 +4,7 @@
  */
 var MetaReponse = require('./MetaResponse');
 var MetaData    = require('./MetaData');
+var MetaError   = require('./MetaError');
 
 var data1 = new MetaData();
 var mr    = new MetaReponse();
@@ -22,4 +23,14 @@ mr.addData(data1.getResponse());
 mr.addData(data1);
 
 //console.log(data1.getResponse());
-console.log(mr.getResponse());
+// console.log(mr.getResponse());
+
+var error = new MetaError();
+error
+    .setStatusCode(401)
+    .setStatus("401 Unauthorized");
+
+var response = new MetaReponse();
+    response.addError(error);
+
+console.log(response.getResponse().errors);

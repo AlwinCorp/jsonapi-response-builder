@@ -6,9 +6,17 @@ function MetaResponse () {
 
 	this.response = {
         "links": {},
-        "data": [],
         "included": {}
     }
+}
+
+/**
+ * Get the default Content-Type header's value
+ * 
+ * @return {String} Header value
+ */
+MetaResponse.prototype.getContentType = function() {
+    return "application/vnd.api+json";
 }
 
 /**
@@ -19,6 +27,8 @@ function MetaResponse () {
  */
 MetaResponse.prototype.addLink = function(name, url) {
 	this.getResponse().links[name] = url;
+
+    return this;
 }
 
 /**
@@ -31,6 +41,8 @@ MetaResponse.prototype.removeLink = function(name) {
     if(this.getResponse().links.hasOwnProperty(name)) {
         delete this.getResponse().links[name];
     }
+
+    return this;
 }
 
 /**
@@ -40,12 +52,18 @@ MetaResponse.prototype.removeLink = function(name) {
  */
 MetaResponse.prototype.addData = function(object) {
 
+    if(!this.getResponse().hasOwnProperty('data')) {
+        this.getResponse()['data'] = [];
+    }
+
     if(typeof object.getResponse === "function") {
-        this.response.data.push(object.getResponse());
+        this.getResponse().data.push(object.getResponse());
     }
     else {
-        this.response.data.push(object);
+        this.getResponse().data.push(object);
     }
+
+    return this;
 }
 
 /**
@@ -54,7 +72,7 @@ MetaResponse.prototype.addData = function(object) {
  * @return {string}
  */
 MetaResponse.prototype.getData = function() {
-    return this.response['data'];
+    return (this.response.hasOwnProperty('data')) ? this.response['data'] : undefined ;
 }
 
 /**
@@ -64,6 +82,18 @@ MetaResponse.prototype.getData = function() {
  */
 MetaResponse.prototype.getResponse = function() {
     return this.response;
+}
+
+MetaResponse.prototype.addError = function(error) {
+    if(!this.getResponse().hasOwnProperty('errors')) {
+        this.getResponse()['errors'] = [];
+    }
+
+    if(typeof error.getResponse === "function") {
+        this.getResponse().errors.push(error.getResponse());
+    } else {
+        this.getResponse().errors.push(error);
+    }
 }
 
 module.exports = MetaResponse;

@@ -12,6 +12,17 @@ In order to install that module, open a terminal, go to your npm project and run
 
 You can also run that command with the -g option to save it globally and re-use it later.
 
+## How to use it
+
+As any NodeJS module, you can load it with the require() function.
+
+    var ResponseBuilder = require('jsonapi-response-builder');
+
+Then, you can use it to build your anwsers.
+
+    var response = new ResponseBuilder.Response();
+    console.log(response.getResponse());
+
 ## Contributing
 
 This project is my first contribution to the NPM community and i hope that you will find it usefull. Please, feel free to suggest, contribute, fork the project in order to make it better!
@@ -41,3 +52,17 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Changelog
+
+### Coming next
+- Validation format (checking requirements)
+
+### v0.0.3
+- Adding the Error management
+- Few adjustements
+
+### v0.0.2
+- Fixes
+
+### v0.0.1
+- First version
+- Introducing basic implementation
