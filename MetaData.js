@@ -17,6 +17,8 @@ function MetaData () {
  */
 MetaData.prototype.setType = function(type) {
     this.data["type"] = type;
+
+    return this;
 }
 
 /**
@@ -36,6 +38,8 @@ MetaData.prototype.getType = function() {
  */
 MetaData.prototype.addLink = function(name, url) {
     this.getResponse().links[name] = url;
+
+    return this;
 }
 
 /**
@@ -48,6 +52,8 @@ MetaData.prototype.removeLink = function(name) {
     if(this.getResponse().links.hasOwnProperty(name)) {
         delete this.getResponse().links[name];
     }
+
+    return this;
 }
 
 /**
@@ -56,6 +62,8 @@ MetaData.prototype.removeLink = function(name) {
  */
 MetaData.prototype.setId = function(id) {
     this.data["id"] = id;
+
+    return this;
 }
 
 /**
@@ -68,6 +76,8 @@ MetaData.prototype.getId = function() {
 
 MetaData.prototype.addAttribute = function(name, value) {
     this.data[name] = value;
+
+    return this;
 }
 
 /**

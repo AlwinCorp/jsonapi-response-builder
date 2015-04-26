@@ -1,6 +1,6 @@
 {
   "name": "jsonapi-response-builder",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Response builder for NodeJS based on http://jsonapi.org/ recommendations",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   },
   "keywords": [
     "JSONApi",
+    "API JSON",
     "Response",
     "Builder"
   ],

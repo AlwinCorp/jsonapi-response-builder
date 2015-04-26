@@ -94,6 +94,8 @@ MetaResponse.prototype.addError = function(error) {
     } else {
         this.getResponse().errors.push(error);
     }
+
+    return this;
 }
 
 module.exports = MetaResponse;
