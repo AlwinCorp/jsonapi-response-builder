@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/AlwinCorp/jsonapi-response-builder/issues"
   },
-  "homepage": "https://github.com/AlwinCorp/jsonapi-response-builder"
+  "homepage": "https://github.com/AlwinCorp/jsonapi-response-builder",
+  "dependencies": {
+    "chai": "^2.3.0"
+  }
 }
