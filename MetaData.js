@@ -5,7 +5,8 @@
 function MetaData () {
 
     this.data = {
-        "links": []
+        "links": [],
+        "attributes": []
     }
 
 }
