@@ -76,13 +76,15 @@ MetaData.prototype.getId = function() {
 }
 
 MetaData.prototype.addAttribute = function(name, value) {
-    this.data["attributes"][name] = value;
+    this.getResponse().attributes[name] = value;
 
     return this;
 }
 
-MetaData.prototype.removeAttribute = function(name, value) {
-    this.data.hasOwnProperty(attributes)[name] = ""
+MetaData.prototype.removeAttribute = function(name) {
+    if(this.getResponse().attributes.hasOwnProperty(name)) {
+        delete this.getResponse().attributes[name];
+    }
 
     return this;
 }

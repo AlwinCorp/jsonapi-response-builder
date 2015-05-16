@@ -12,6 +12,7 @@ var mr    = new MetaReponse();
 data1.setId(3);
 data1.setType('recipe');
 data1.addAttribute('title', 'Risotto al funghi');
+data1.addAttribute('time', '45mins');
 data1.addLink('self', 'http://www.monsite.com/recipe/3');
 data1.addLink('next', 'http://www.monsite.com/recipe/4');
 data1.addLink('prev', 'http://www.monsite.com/recipe/2');
