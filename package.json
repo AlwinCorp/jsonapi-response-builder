@@ -4,7 +4,7 @@
   "description": "Response builder for NodeJS based on http://jsonapi.org/ recommendations",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/AlwinCorp/jsonapi-response-builder/issues"
   },
-  "homepage": "https://github.com/AlwinCorp/jsonapi-response-builder"
+  "homepage": "https://github.com/AlwinCorp/jsonapi-response-builder",
+  "dependencies": {
+    "chai": "^2.3.0"
+  }
 }
